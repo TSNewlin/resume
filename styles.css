@@ -1,0 +1,120 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+    isolation: isolate;
+}
+
+/********** END RESET **********/
+
+* {
+    font-family: 'Poppins', 'Gill Sans', sans-serif;
+}
+
+h1 {
+    color: #006494;
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 21px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+main {
+    display: flex;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+li {
+    font-size: 14px;
+}
+
+.experience {
+    flex: 2;
+}
+
+.experience-item > ul {
+    padding-inline-start: 25px;
+}
+
+.experience-item > p {
+    font-size: 16px;
+}
+
+.education-and-skills {
+    flex: .75;
+    margin-top: calc(21px + (21px / 3))
+}
+
+.skills > ul {
+    list-style-type: none;
+    padding-inline-start: 5px;
+    margin: 0 0 15px;
+}
+
+.education > p, .education > h4 {
+    font-size: 14px;
+    padding-inline-start: 5px;
+}
+
+.education > h4:first-of-type {
+    margin-top: 5px;
+}
+
+.education > h4:not(:first-of-type) {
+    margin-top: 10px;
+}
+
+/*********** Print ************/
+
+@page {
+    size: letter;
+    margin: 0 0.5in 0 0.5in;
+    padding: 0.75in 0;
+}
